@@ -1,0 +1,17 @@
+<launch> 
+
+ 	<!-- Turtlesim Node -->
+ 	<node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+
+	<!-- Spawn two more turtles -->
+	<node pkg="rosservice" type="rosservice" name="create_obstacle1" args='call --wait /spawn "{x: 8.5,y: 1.0, theta: 0.0, name: obstacle1}" '/>
+	<node pkg="rosservice" type="rosservice" name="create_obstacle2" args='call --wait /spawn "{x: 9.5,y: 3.0, theta: 0.0, name: obstacle2}" '/>
+
+	<!-- Launch obstacle_controller node -->
+	<node name="obstacle_controller" pkg="exercise_5" type="obstacle_controller" output="screen">
+		<param name = "goal_x_coord" value = "10.0"/> 
+		<param name = "goal_y_coord" value = "1.0"/> 
+	</node>
+
+</launch>
+

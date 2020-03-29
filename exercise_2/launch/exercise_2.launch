@@ -1,0 +1,20 @@
+<launch>
+
+	<!-- Turtlesim Node for turtle simulation -->
+	<node pkg="turtlesim" type="turtlesim_node" name="sim" output="screen"/>
+	
+	<!-- Controller Node for applying saturation limits as args-->
+	<node pkg="exercise_2" type="saturation_controller" name="saturation_controller" output="screen">
+		<param name = "min_linear" value = "$(arg min_linear)"/> 
+		<param name = "max_linear" value = "$(arg max_linear)"/>
+		<param name = "min_angular" value = "$(arg min_angular)"/>
+		<param name = "max_angular" value = "$(arg max_angular)"/>
+	</node>
+	
+	<!-- Custom command publisher -->
+	<node pkg="rostopic" type="rostopic" name="custom_vel_control" args="pub -r 10 /custom_vel_control exercise_2/CustomVelMsg '{linear_velocity: -3.5, angular_yaw: 2}'" output="screen"/>
+	
+	<!-- Rqt_plot -->
+	<node pkg="rqt_plot" type="rqt_plot" name="plot" args="/turtle1/cmd_vel/linear/x /turtle1/cmd_vel/angular/z /custom_vel_control" output="screen"/>
+
+</launch>

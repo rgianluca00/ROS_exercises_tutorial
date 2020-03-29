@@ -1,0 +1,25 @@
+<launch> 
+
+ 	<!-- Turtlesim Node -->
+ 	<node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+
+	<!-- Spawn three more turtles -->
+	<node pkg="rosservice" type="rosservice" name="create_turtle2" args='call --wait /spawn "{x: 2.0,y: 4.0, theta: 2.5, name: turtle2}" '/>
+	<node pkg="rosservice" type="rosservice" name="create_turtle3" args='call --wait /spawn "{x: 4.0,y: 1.0, theta: -3.5, name: turtle3}" '/>
+	<node pkg="rosservice" type="rosservice" name="create_turtle4" args='call --wait /spawn "{x: 7.0,y: 10.0, theta: -1.5, name: turtle4}" '/>
+
+	<!-- Launch four nodes consent_controller that resolves problem of consent for the four spawned turtles -->
+	<node name="consent_controller_turtle1" pkg="exercise_4" type="consent_controller" output="screen">
+	   <param name="robot_name" value="turtle1"/>
+	</node>
+	<node name="consent_controller_turtle2" pkg="exercise_4" type="consent_controller" output="screen">
+	   <param name="robot_name" value="turtle2"/>
+	</node>
+	<node name="consent_controller_turtle3" pkg="exercise_4" type="consent_controller" output="screen">
+	   <param name="robot_name" value="turtle3"/>
+	</node>
+	<node name="consent_controller_turtle4" pkg="exercise_4" type="consent_controller" output="screen">
+	   <param name="robot_name" value="turtle4"/>
+	</node>
+
+</launch>
