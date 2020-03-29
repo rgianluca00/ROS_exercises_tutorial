@@ -1,14 +1,14 @@
-#Exercise_1
+# Exercise_1
 
 Visualize turtle pose on rviz while controlling it through keyboard using turtlesim node.
 
-##Usage
+## Usage
 
 Launch the exercise with the following command
 ```
 roslaunch exercise_1 exercise_1.launch
 ```
-##NOTES
+## NOTES
 
 * Click on the terminal where the previous command was launched in order to move the turtle both on turtlesim simulation window and on rviz
 
