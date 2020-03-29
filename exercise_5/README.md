@@ -60,5 +60,5 @@ roslaunch exercise_5 exercise_5_test4.launch
 
 * To change goal configuration, go to exercise_5_test<number>.launch and change:
 
-<param name = "goal_x_coord" value = "<desired_value>"/> 
-<param name = "goal_y_coord" value = "<desired_value>"/> 
+- <param name = "goal_x_coord" value = "<desired_value>"/> 
+- <param name = "goal_y_coord" value = "<desired_value>"/> 
