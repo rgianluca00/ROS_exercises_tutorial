@@ -1,24 +1,24 @@
-#ROS_Exercises
+# ROS_Exercises
 
-##INFO
+## INFO
 
-AUTHOR: Gianluca Rinaldi, rgianluca00@gmail.com
+* AUTHOR: Gianluca Rinaldi, rgianluca00@gmail.com
 
-COURSE: Distribuited Robotic Systems
+* COURSE: Distribuited Robotic Systems
 
-FACULTY: Robotics and Automation Engineering
+* FACULTY: Robotics and Automation Engineering
 
-UNIVERSITY: University of Pisa
+* UNIVERSITY: University of Pisa
 
-##DESCRIPTION
+## DESCRIPTION
 
 Small collection of five ROS exercises, written in c++ 
 
-##FRAMEWORK 
+## FRAMEWORK 
 
 ROS + KDevelop (optional)
 
-##USAGE
+## USAGE
 
 1. copy the exercises folders in your catkin workspace directory
 
