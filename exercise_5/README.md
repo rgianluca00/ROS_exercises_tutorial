@@ -53,7 +53,7 @@ roslaunch exercise_5 exercise_5_test4.launch
 
 ## NOTES
 
-* To change obstacle position, go to exercise_5_test<number>.launch and change:
+* To change obstacle position, go to exercise_5_test\<number>\.launch and change:
 
 - "{x: <desired_x_coord>, y: <desired_y_coord>, theta: <desired_theta_coord>, name: obstacle1}", for obstacle1
 - "{x: <desired_x_coord>, y: <desired_y_coord>, theta: <desired_theta_coord>, name: obstacle2}", for obstacle2
